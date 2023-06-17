@@ -13,6 +13,7 @@ if [ ! -d "build" ]; then
     -DMLIR_ENABLE_BINDINGS_PYTHON=ON \
     -DLLVM_TARGETS_TO_BUILD=host \
     -DLLVM_CCACHE_BUILD=ON \
+    -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ \
     -DCMAKE_C_COMPILER_LAUNCHER=ccache -DCMAKE_CXX_COMPILER_LAUNCHER=ccache \
     externals/llvm-project/llvm
 fi
